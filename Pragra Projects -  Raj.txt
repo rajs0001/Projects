@@ -1,0 +1,9 @@
+Pragra Project:-
+
+This project is to provide statistics data for scientist team.
+Created target marketing tables in Azure Data lake gen 2 (Silver layer).
+Extracted Marketing data from various sources including source files and on prem sql server and loaded raw data into silver layer using Azure data factory.
+Created pyspark scirpts using data bricks for intial and delta loads to load data into bronze layer.
+Transformed data as per business requirements using pyspark scripts in data brick and loaded into gold layer.
+Scheduled pyspark scripts using Azure Data Factory pipelines.
+   
