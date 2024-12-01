@@ -1,6 +1,17 @@
+Pragra Project Technical Steps:-
+1. Extracted sales data from below 3 sources using Azure Data factory:-
+- Azure SQL Server
+- SQL server on prem 
+- Rest api
+1.1. Created ADF pipeline to load multiple Azure SQL tables using lookup, for each and copy activities. Used lookup activity to get schema names and table names of source tables for bulk load and stored in teh dynamic parameters. Defined dynamic parameters in the for each to loop through list of source tables and define names of target tables. Created Key Vault and Secret to avoid hard coded credentials for security purpose. Loaded data into files in Azure Data Lake Gen2 raw layer container.   
+1.2 Identified and analysed on prem SQL Server sources. Extracted customers data from on prem tables using copy activity in Azure Data Factory. Used Key Vault to securly store password in the secret.
+1.3 Extracted Rest API data from multi level JSON format in the source. Created API data sets using API linked service and used existing Azure Data Lake Gen2 for Sink data sets.
+
+
+
 Pragra Project:-
 
-This project is to provide statistics data for scientist team.
+This project is to provide statistics data for data scientist team.
 Created target marketing tables in Azure Data lake gen 2 (Silver layer).
 Extracted Marketing data from various sources including source files and on prem sql server and loaded raw data into silver layer using Azure data factory.
 Created pyspark scirpts using data bricks for intial and delta loads to load data into bronze layer.
